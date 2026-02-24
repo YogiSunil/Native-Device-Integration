@@ -4,7 +4,7 @@ import * as ImagePicker from 'expo-image-picker';
 
 export default function FeatureScreen({ route }) {
   const station = route?.params?.station ?? 'Pick a station in Explore';
-  const [imageUri, setImage] = React.useState([]);
+  const [images, setImages] = React.useState([]);
 
 const pickImage = async () => {
   const perm = await ImagePicker.requestMediaLibraryPermissionsAsync();
